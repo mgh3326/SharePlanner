@@ -74,6 +74,9 @@ div button.login {
     z-index: -1;
 }
 
+#naverIdLogin {
+    height : 40px;
+}
 
 body {
     font-size: .875rem;
