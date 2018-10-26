@@ -6,29 +6,28 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="/index.jsp">SharePlanner</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/index.jsp?contentPage=mypage.jsp">MyPage <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" href="#">Disabled</a>
+                <a class="nav-link" href="/index.jsp?contentPage=calendar.jsp">Calendar</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                <div class="dropdown-menu" aria-labelledby="dropdown01">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                <a class="nav-link dropdown-toggle" href="/index.jsp?contentPage=market.jsp" id="dropdown-market" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Market</a>
+                <%--<a class="nav-link disabled" href="/market.jsp">Market</a>--%>
+                <div class="dropdown-menu" aria-labelledby="dropdown-market">
+                    <a class="dropdown-item" href="#">Theme#1</a>
+                    <a class="dropdown-item" href="#">Theme#2</a>
+                    <a class="dropdown-item" href="#">Theme#3</a>
+                    <a class="dropdown-item" href="#">Theme#4</a>
                 </div>
             </li>
         </ul>

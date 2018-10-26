@@ -7,32 +7,40 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
+<%
+    String contentPage=request.getParameter("contentPage");
+    if(contentPage==null)
+        contentPage="main.jsp";
+%>
 
-<jsp:include page="layout/import_template.jsp" />
-
+<jsp:include page="html/import_template.jsp"/>
 
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
 
 
-    <title>Starter Template for Bootstrap</title>
+        <title>SharePlanner</title>
 
-</head>
+    </head>
 
-<body>
-<%-- Body Area--%>
-<jsp:include page="layout/navigation_bar.jsp" />
-
-<%-- Body Area--%>
-<jsp:include page="main.jsp" />
+    <body>
+        <%-- Navigation bar Area--%>
+        <jsp:include page="html/navigation_bar.jsp"/>
 
 
-<jsp:include page="layout/import_js.jsp" />
+        <%-- Body Area--%>
+        <div id="main">
+            <jsp:include page="<%=contentPage%>"/>
 
-</body>
+        </div>
+
+
+        <jsp:include page="html/import_js.jsp"/>
+
+    </body>
 </html>
