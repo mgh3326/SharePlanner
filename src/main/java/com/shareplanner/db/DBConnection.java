@@ -24,9 +24,11 @@ public class DBConnection {
         BasicDBObject obj = (BasicDBObject) JSON.parse(gson.toJson(plan));
         DB db = mongoClient.getDB("SharePlanner");
 
-        DBCollection coll1 = db.getCollection("test");
+        DBCollection coll1 = db.getCollection("plan");
         coll1.insert(obj);
     }
+
+
 
 
 

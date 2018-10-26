@@ -74,6 +74,35 @@ div button.login {
     z-index: -1;
 }
 
+.modal {
+    position: static;
+}
+
+ .float{
+     font-size: 35px;
+     vertical-align: middle;
+     z-index: 1030;
+     position:fixed;
+     width:60px;
+     height:60px;
+     bottom:40px;
+     right:40px;
+     background-color:#0C9;
+     color:#FFF;
+     border-radius:50px;
+     text-align:center;
+     box-shadow: 2px 2px 3px #999;
+ }
+
+.my-float{
+    z-index: 1050;
+    margin-top:22px;
+}
+
+.modal-dialog {
+    max-width: 800px;
+}
+
 body {
     font-size: .875rem;
     line-height: 1.5;
