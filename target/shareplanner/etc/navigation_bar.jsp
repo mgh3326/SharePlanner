@@ -39,16 +39,17 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
-            <li id="mypage" class="nav-item ">
+            <li class="nav-item mypageNav">
                 <a class="nav-link" href="/index.jsp?contentPage=mypage.jsp">MyPage <span class="sr-only">(current)</span></a>
             </li>
-            <li id="calendar" class="nav-item">
+            <li class="nav-item calendarNav">
                 <a class="nav-link" href="/index.jsp?contentPage=calendar.jsp">Calendar</a>
             </li>
-            <li id="market" class="nav-item dropdown">
+            <li class="nav-item dropdown marketNav">
                 <a class="nav-link dropdown-toggle" href="/index.jsp?contentPage=market.jsp" id="dropdown-market" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Market</a>
                 <%--<a class="nav-link disabled" href="/market.jsp">Market</a>--%>
                 <div class="dropdown-menu" aria-labelledby="dropdown-market">
+                    <a class="dropdown-item" href="/index.jsp?contentPage=market.jsp">전체보기</a>
                     <a class="dropdown-item" href="#">Theme#1</a>
                     <a class="dropdown-item" href="#">Theme#2</a>
                     <a class="dropdown-item" href="#">Theme#3</a>
@@ -66,5 +67,5 @@
 
 <script>
     var contentPage = getUrlParameter('contentPage').split(".");
-    $('#' + contentPage[0]).addClass("active");
+    $('.' + contentPage[0]+"Nav").addClass("active");
 </script>

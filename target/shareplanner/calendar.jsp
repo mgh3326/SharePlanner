@@ -6,7 +6,5 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<p>
-    This site is Calendar
-    .
-</p>
+
+<jsp:include page="fullcalendar/calendar/usercalendar.jsp"/>
