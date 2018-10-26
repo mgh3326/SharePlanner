@@ -9,11 +9,17 @@
 
 <%
     String contentPage=request.getParameter("contentPage");
+    String myPage=request.getParameter("myPage");
     if(contentPage==null)
         contentPage="main.jsp";
+    if(myPage != null)
+    {
+        contentPage += "?myPage=" + myPage;
+    }
+
 %>
 
-<jsp:include page="html/import_template.jsp"/>
+<jsp:include page="etc/import_template.jsp"/>
 
 <!doctype html>
 <html lang="en">
@@ -30,17 +36,15 @@
 
     <body>
         <%-- Navigation bar Area--%>
-        <jsp:include page="html/navigation_bar.jsp"/>
+        <jsp:include page="etc/navigation_bar.jsp"/>
+
+        <%-- Content Area --%>
+        <jsp:include page="<%=contentPage%>"/>
 
 
-        <%-- Body Area--%>
-        <div id="main">
-            <jsp:include page="<%=contentPage%>"/>
+        <%-- Import js. This work must be in end area to fast loading.--%>
+        <jsp:include page="etc/import_js.jsp"/>
 
-        </div>
-
-
-        <jsp:include page="html/import_js.jsp"/>
 
     </body>
 </html>

@@ -8,19 +8,22 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand" href="/index.jsp">SharePlanner</a>
+    <div>
+        <a class="navbar-brand" href="/index.jsp">SharePlanner</a>
+        <button type="button" class="btn btn-info login">Login</button>
+    </div>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
+            <li id="mypage" class="nav-item ">
                 <a class="nav-link" href="/index.jsp?contentPage=mypage.jsp">MyPage <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item">
+            <li id="calendar" class="nav-item">
                 <a class="nav-link" href="/index.jsp?contentPage=calendar.jsp">Calendar</a>
             </li>
-            <li class="nav-item dropdown">
+            <li id="market" class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="/index.jsp?contentPage=market.jsp" id="dropdown-market" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Market</a>
                 <%--<a class="nav-link disabled" href="/market.jsp">Market</a>--%>
                 <div class="dropdown-menu" aria-labelledby="dropdown-market">
@@ -37,3 +40,9 @@
         </form>
     </div>
 </nav>
+
+
+<script>
+    var contentPage = getUrlParameter('contentPage').split(".");
+    $('#' + contentPage[0]).addClass("active");
+</script>
