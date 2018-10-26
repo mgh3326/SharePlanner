@@ -7,10 +7,32 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
+
+
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
     <div>
         <a class="navbar-brand" href="/index.jsp">SharePlanner</a>
-        <button type="button" class="btn btn-info login">Login</button>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-info login" data-toggle="modal" data-target="#loginModal">
+            Login
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Please login.</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <jsp:include page="../login/naverlogin.jsp"/>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
